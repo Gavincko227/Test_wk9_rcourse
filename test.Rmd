@@ -1,0 +1,97 @@
+---
+title: "Testing R Markdown"
+author: "Gavincko Alagesan"
+date: "16/07/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+### Testing some stuff
+fadaf
+
+```{r, eval=TRUE, echo=FALSE}
+norm <- rnorm(100, mean=0, sd = 1)
+norm[1]
+```
+### TESTING Kable - for better table
+```{r cars2, results='markup', eval=FALSE, echo=F}
+cars
+knitr::kable(cars)
+```
+
+
+### TESTING - Formatting Text
+This is  *italic*
+
+This is **Bold**
+
+Here I have some ***italic and bold***
+
+Here I have some `r mean(c(2,3,4))` here
+
+# Header 1
+## Header 2
+### Header 3
+
+I have a list
+
+* first item
+* next item
+
+I have ordered items
+
+1. item1
+3. item3
+2. item2
+
+The data set has `r nrow(cars)` rows
+
+For google click [here](http://www.google.com)
+```
+#This is my work avatar:
+
+#![Gavincko's Avatar](/Users/gavinckoalagesan/Downloads/Gavincko_Alagesan_Headshot.jpeg)
+```
+
+can also put videos as images 
+
+
+Manual pipe table (must end with a blank line)
+
+| Plant | Temp. | Growth |
+|:------|:-----:|-------:| 
+| A     | 20    | 0.65   |
+| B     | 20    | 0.95   |
+| C     | 20    | 0.15   |
+
+
+| Plant | Temp. | Growth |
+|-------|-------|--------|
+| A     | 20    | 0.65   |
+| B     | 20    | 0.95   |
+| C     | 20    | 0.15   |
+
+The colons below column names stand for left sided centred and right sided in 
+first table
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
