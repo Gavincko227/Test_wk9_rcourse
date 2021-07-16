@@ -32,7 +32,7 @@ knitr::kable(cars)
 ```
 
 
-### TESTING Markup - Formatting Text
+### TESTING Markup - Formatting Text - does this makes sense
 This is  *italic*
 
 This is **Bold**
